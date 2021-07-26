@@ -1,1 +1,1 @@
-ls -a  -A  -m -u -t -A -F | sed 's/ /,/g'
+ls -a  -A  -m -u -t -A -F | sed -e 's/\s\+,/,/g'
