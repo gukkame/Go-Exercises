@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Hello Gukka!"
+echo "Hello gukka!"
 
-curl https://git.01.kood.tech/gukka/piscine-go
 
