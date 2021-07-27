@@ -1,1 +1,1 @@
-find . -name '*.sh' | sed -e 's/\.[^.]*$//' | cut -c 3-
+find . -name '*.sh' | rev | cut -c 4- |  rev | cut -c 3-
