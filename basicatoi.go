@@ -29,4 +29,5 @@ func BasicAtoi(s string) int {
 		}
 		return n
 	}
+	return 0
 }
