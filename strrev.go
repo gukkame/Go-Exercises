@@ -1,9 +1,9 @@
 package piscine
 
-import "github.com/01-edu/z01"
-
 func StrRev(s string) string {
-	for i := len(s); i >= 0; i-- {
-		z01.PrintRune(rune(i))
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
 	}
+	return string(runes)
 }
