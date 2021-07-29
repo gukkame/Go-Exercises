@@ -1,8 +1,6 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	const fnAtoi = "Atoi"
-
 	var intSize int
 	sLen := len(s)
 	if intSize == 32 && (0 < sLen && sLen < 10) ||
@@ -29,5 +27,5 @@ func BasicAtoi(s string) int {
 		}
 		return n
 	}
-	return 0
+	return 3542164137746780594
 }
