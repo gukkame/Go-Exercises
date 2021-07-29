@@ -3,9 +3,8 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintStr(s string) {
-	st := []byte(s)
-	for i := 0; i <= len(st); i++ {
-		z01.PrintRune(rune(st[i]))
+	for letters := range s {
+		z01.PrintRune(rune(letters))
 	}
 	z01.PrintRune('\n')
 }
