@@ -17,6 +17,9 @@ func Sqrt(nb int) int {
 			z = 0
 			break
 		}
+		if z == 1 {
+			break
+		}
 	}
 
 	return z
