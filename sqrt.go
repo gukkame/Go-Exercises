@@ -7,6 +7,9 @@ func Sqrt(nb int) int {
 
 	for z*z != nb {
 		z = int((upper + lower) / 2)
+		if nb == 1 {
+			return 1
+		}
 		if z*z > nb {
 			upper = z
 		}
@@ -17,9 +20,7 @@ func Sqrt(nb int) int {
 			z = 0
 			break
 		}
-		if z == 1 {
-			break
-		}
+
 	}
 
 	return z
