@@ -6,7 +6,7 @@ func NRune(s string, n int) rune {
 		c++
 	}
 
-	if n > 1 && c+1 > n {
+	if n > 0 && c+1 > n {
 		k := ([]rune(s))[n-1]
 		r := rune(k)
 		return r
