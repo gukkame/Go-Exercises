@@ -8,8 +8,8 @@ func NRune(s string, n int) rune {
 
 	if n > 1 && c+1 > n {
 		k := ([]rune(s))[n-1]
-
-		return k
+		r := rune(k)
+		return r
 
 	} else {
 		return 0
