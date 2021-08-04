@@ -9,11 +9,11 @@ import (
 func main() {
 	args := os.Args
 
-	for i := len(args); i > 1; i++ {
-		for j := 0; j < len(string(i)); j++ {
-			z01.PrintRune(j)
-		}
+	for i := len(args); i >= 1; i-- {
 
+		for _, r := range string(i) { // print character
+			z01.PrintRune(r)
+		}
 		z01.PrintRune('\n')
 	}
 }
