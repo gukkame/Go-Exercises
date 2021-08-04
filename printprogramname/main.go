@@ -12,7 +12,9 @@ func main() {
 
 	runes := []rune(name)
 	for i := range runes {
-		z01.PrintRune(runes[i])
+		if i > 1 {
+			z01.PrintRune(runes[i])
+		}
 	}
 	z01.PrintRune('\n')
 }
