@@ -12,6 +12,9 @@ func SplitWhiteSpaces(s string) []string {
 		if letter >= '!' && letter <= '/' {
 			tempString = tempString + string(letter)
 		}
+		if letter >= 123 && letter <= 126 {
+			tempString = tempString + string(letter)
+		}
 		if letter == 32 && tempString != "" {
 			newString = append(newString, tempString)
 			tempString = ""
