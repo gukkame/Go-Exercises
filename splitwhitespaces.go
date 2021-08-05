@@ -8,7 +8,11 @@ func SplitWhiteSpaces(s string) []string {
 	for i, letter := range s {
 		if (letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z') {
 			tempString = tempString + string(letter)
-		} else if letter == 32 && tempString != "" {
+		}
+		if letter >= '!' && letter <= '/' {
+			tempString = tempString + string(letter)
+		}
+		if letter == 32 && tempString != "" {
 			newString = append(newString, tempString)
 			tempString = ""
 		} else if i == length {
