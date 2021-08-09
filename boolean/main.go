@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/01-edu/z01"
 )
 
@@ -20,9 +22,10 @@ func isEven(nbr int) int {
 }
 
 func main() {
+	a := len(os.Args)
 	if isEven(a) == 0 {
-		printStr("EvenMsg")
+		printStr("I have an even number of arguments")
 	} else {
-		printStr("OddMsg")
+		printStr("I have an odd number of arguments")
 	}
 }
