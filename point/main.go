@@ -9,17 +9,15 @@ type point struct {
 	y int
 }
 
-func setPoint(ptr *point, x int, y int) {
-	ptr.x = x
-	x = 42
-	ptr.y = y
-	y = 21
+func setPoint(ptr *point) {
+	ptr.x = 42
+	ptr.y = 21
 }
 
 func main() {
-	points := point{}
+	points := &point{}
 
-	setPoint(&points, 42, 21)
+	setPoint(points)
 	p := points.x / 10
 	o := points.x % 10
 	p1 := points.y / 10
