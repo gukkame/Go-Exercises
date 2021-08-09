@@ -13,6 +13,6 @@ func main() {
 	} else if len(os.Args) > 2 {
 		fmt.Println("too many arg")
 	} else {
-		fmt.Println(string(content))
+		fmt.Print(string(content))
 	}
 }
