@@ -11,7 +11,7 @@ func main() {
 	if err != nil || len(os.Args) < 2 {
 		fmt.Println("File name missing")
 	} else if len(os.Args) > 2 {
-		fmt.Println("too many arg")
+		fmt.Println("Too many arguments")
 	} else {
 		fmt.Print(string(content))
 	}
