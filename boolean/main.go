@@ -1,8 +1,6 @@
 package main
 
 import (
-	"os"
-
 	"github.com/01-edu/z01"
 )
 
@@ -13,16 +11,16 @@ func printStr(s string) {
 	z01.PrintRune('\n')
 }
 
-func isEven(nbr int) bool {
-	if nbr == 1 {
-		return true
+func isEven(nbr int) int {
+	if nbr == 2 {
+		return 1
 	} else {
-		return false
+		return 0
 	}
 }
 
 func main() {
-	if isEven(len(os.Args)) == false {
+	if isEven(a) == 0 {
 		printStr("EvenMsg")
 	} else {
 		printStr("OddMsg")
