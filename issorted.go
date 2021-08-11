@@ -5,25 +5,34 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	for i := 0; i < len(a); i++ {
 		if f(i, i+1) == 1 {
 			arr = append(arr, true)
-		}
-		if f(i, i+1) == -1 {
+		} else if f(i, i+1) == -1 {
 			arr = append(arr, false)
+		} else {
+			return false
 		}
 	}
+	fa := 0
+	tr := 0
 	for _, v := range arr {
-		if v == false {
-			return false
+		if !v {
+			fa++
 		} else {
-			return true
+			tr++
 		}
+	}
+	if tr == len(a) {
+		return true
+	} else {
+		return false
 	}
 }
 
-func Order(ft, sc int) int {
-	for ft := 0; ft <= sc; ft++ {
+func f(ft, sc int) int {
+	if ft <= sc {
 		return 1
 	}
-	for ft := 0; ft > sc; ft++ {
+	if ft > sc {
 		return -1
 	}
+	return 0
 }
