@@ -3,10 +3,10 @@ package piscine
 func IsSorted(f func(a, b int) int, a []int) bool {
 	arr := []bool{}
 	for i := 1; i < len(a); i++ {
-		if f(a[i-1], a[i]) == 1 {
+		if Order(a[i-1], a[i]) == 1 {
 			arr = append(arr, true)
 		}
-		if f(a[i-1], a[i]) == -1 {
+		if Order(a[i-1], a[i]) == -1 {
 			arr = append(arr, false)
 		} else {
 			arr = append(arr, false)
