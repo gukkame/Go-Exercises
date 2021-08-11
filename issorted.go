@@ -13,26 +13,24 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 	}
 	fa := 0
-	tr := 0
+
 	for _, v := range arr {
 		if !v {
 			fa++
-		} else {
-			tr++
 		}
 	}
-	if tr == len(a) {
-		return true
-	} else {
+	if fa > 0 {
 		return false
+	} else {
+		return true
 	}
 }
 
-func f(ft, sc int) int {
-	if ft <= sc {
+func Order(a, b int) int {
+	if a <= b {
 		return 1
 	}
-	if ft > sc {
+	if a > b {
 		return -1
 	}
 	return 0
