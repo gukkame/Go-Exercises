@@ -27,10 +27,10 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 }
 
 func Order(a, b int) int {
-	if a <= b {
+	if a >= b {
 		return 1
 	}
-	if a > b {
+	if a < b {
 		return -1
 	}
 	return 0
