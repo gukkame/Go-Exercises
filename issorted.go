@@ -21,7 +21,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			tr++
 		}
 	}
-	if tr == len(arr) {
+	if tr == len(a) {
 		return true
 	} else {
 		return false
