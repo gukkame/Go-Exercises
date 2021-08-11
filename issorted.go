@@ -8,7 +8,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		} else if f(i, i+1) == -1 {
 			arr = append(arr, false)
 		} else {
-			return false
+			arr = append(arr, true)
 		}
 	}
 	fa := 0
@@ -20,7 +20,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			tr++
 		}
 	}
-	if tr == len(a) {
+	if tr == len(arr) {
 		return true
 	} else {
 		return false
