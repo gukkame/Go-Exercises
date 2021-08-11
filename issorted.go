@@ -1,30 +1,21 @@
 package piscine
 
 func IsSorted(f func(a, b int) int, a []int) bool {
-	arr := []bool{}
-	for i := 1; i < len(a); i++ {
-		if Order(a[i-1], a[i]) == 1 {
-			arr = append(arr, true)
+	res := 1
+	res2 := 1
+	res3 := 1
+	for k, v := range a {
+		if k != len(a)-1 {
+			if f(v, a[k+1]) < 0 {
+				res++
+			}
+			if f(v, a[k+1]) > 0 {
+				res2++
+			}
+			if f(v, a[k+1]) == 0 {
+				res3++
+			}
 		}
-		if Order(a[i-1], a[i]) == -1 {
-			arr = append(arr, false)
-		}
 	}
-
-	for _, v := range arr {
-		if !v {
-			return false
-		}
-		return true
-	}
-}
-
-func Order(a, b int) int {
-	if a <= b {
-		return 1
-	}
-	if a > b {
-		return -1
-	}
-	return 0
+	return res == len(a) || res2 == len(a) || res3 == len(a)
 }
