@@ -71,9 +71,16 @@ func main() {
 	arrayOfFunctions := []func(int, int) int{plus, minus, times, div, mod}
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
 
-	r := rune(result)
-	s := string(r)
-	os.Stdout.WriteString(s)
+	a := []int{result}
+
+	for _, v := range a {
+
+		r := rune(v + 47)
+		s := string(r)
+		os.Stdout.WriteString(s)
+
+	}
+	os.Stdout.WriteString("\n")
 }
 
 func plus(a, b int) int {
