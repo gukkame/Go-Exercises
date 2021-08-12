@@ -2,8 +2,6 @@ package main
 
 import (
 	"os"
-
-	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -29,7 +27,7 @@ func main() {
 	} else if arguments[1] == "%" {
 		sign = 4
 	} else {
-		z01.PrintRune('0')
+		os.Stdout.WriteString("0")
 		return
 	}
 
@@ -37,8 +35,8 @@ func main() {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
 		} else {
-			z01.PrintRune('O')
-			z01.PrintRune('\n')
+			os.Stdout.WriteString("0\n")
+
 			return
 		}
 	}
@@ -47,8 +45,8 @@ func main() {
 		if (s >= '0' && s <= '9') || (i == 0 && s == '-') {
 			continue
 		} else {
-			z01.PrintRune('O')
-			z01.PrintRune('\n')
+			os.Stdout.WriteString("0\n")
+
 			return
 		}
 	}
@@ -58,16 +56,14 @@ func main() {
 
 	if secondNbr == 0 && arguments[1] == "/" {
 		s := "No division by 0"
-		for _, l := range s {
-			z01.PrintRune(l)
-		}
+		os.Stdout.WriteString(s)
+
 		return
 	}
 	if secondNbr == 0 && arguments[1] == "%" {
 		s := "No Modulo by 0"
-		for _, l := range s {
-			z01.PrintRune(l)
-		}
+		os.Stdout.WriteString(s)
+
 		return
 	}
 
@@ -75,12 +71,9 @@ func main() {
 	arrayOfFunctions := []func(int, int) int{plus, minus, times, div, mod}
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
 
-	t := result / 100
-	p := result / 10
-	f := result % 10
-	z01.PrintRune(rune(t) + 48)
-	z01.PrintRune(rune(p) + 48)
-	z01.PrintRune(rune(f) + 48)
+	r := rune(result)
+	s := string(r - 48)
+	os.Stdout.WriteString(s)
 }
 
 func plus(a, b int) int {
