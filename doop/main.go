@@ -73,13 +73,13 @@ func main() {
 
 	a := []int{result}
 
-	for v := range a {
+	for _, v := range a { // 45678
 
 		r := rune(v + 47)
 		s := string(r)
 		os.Stdout.WriteString(s)
-
 	}
+
 	os.Stdout.WriteString("\n")
 }
 
