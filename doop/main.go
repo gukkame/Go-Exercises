@@ -72,7 +72,7 @@ func main() {
 	result = apply(arrayOfFunctions[sign], firstNbr, secondNbr)
 
 	r := rune(result)
-	s := string(r - 48)
+	s := string(r)
 	os.Stdout.WriteString(s)
 }
 
