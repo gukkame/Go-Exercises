@@ -75,7 +75,7 @@ func main() {
 
 	for _, v := range a { // 45678
 
-		r := rune(v + 47)
+		r := rune(v + 48)
 		s := string(r)
 		os.Stdout.WriteString(s)
 	}
