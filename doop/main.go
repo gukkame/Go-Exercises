@@ -73,7 +73,7 @@ func main() {
 
 	a := []int{result}
 
-	for _, v := range a {
+	for v := range a {
 
 		r := rune(v + 47)
 		s := string(r)
